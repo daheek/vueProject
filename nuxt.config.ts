@@ -20,16 +20,18 @@ export default defineNuxtConfig({
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             ],
+            script: [
+                {src: 'https://accounts.google.com/gsi/client', async: true, defer: true} //google
+            ]
         },
     },
-    runtimeConfig: {
-        public: {
-            
-        }
-    },
     modules: [
-        'nuxt-quasar-ui'
+        'nuxt-quasar-ui',
+        'nuxt-vue3-google-signin'
     ],
+    googleSignIn: {
+        clientId: '클라이언트ID'
+    },
     quasar: { /* */ },
     compatibilityDate: "2024-08-12"
 });
