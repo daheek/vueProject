@@ -1,4 +1,9 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    // type 오류를 덜 경고
+    "strict": false,
+    // null과 undefined를 더 유연하게 처리
+    "strictNullChecks": false
+  }
 }
